@@ -1,0 +1,35 @@
+version: "3.6"
+services:
+  go-noise:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        GO_VERSION: ${GO_VERSION}
+        GOPATH: "${GOPATH}"
+        GO111MODULE: "${GO111MODULE}"
+        APP_NAME: "${APP_NAME}"
+        APP_PATH: "${APP_PATH}"
+        # These environment variables can be used by extending images as  well      
+    container_name: go-noise.dev
+    volumes:
+      - app:${APP_PATH}
+    environment:
+      GOPATH: "${GOPATH}"
+      GO111MODULE: "${GO111MODULE}"
+      APP_NAME: "${APP_NAME}"
+      APP_PATH: "${APP_PATH}"
+    ports:
+      - ${DLV_DEBUG_PORT}
+    security_opt:
+      - seccomp:unconfined
+    tty: true
+
+volumes:
+  app:
+    name: g-noise_go
+    driver: local
+    driver_opts:
+      type: none
+      device: .
+      o: bind

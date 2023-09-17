@@ -1,0 +1,5 @@
+build
+!build/.gitkeep
+noise-go
+__debug_bin
+__*

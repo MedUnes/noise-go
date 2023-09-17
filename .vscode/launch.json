@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Connect to server",
+            "type": "go",
+            "request": "launch",
+            "program": "${workspaceFolder}",
+            "mode": "debug",
+            "trace": "verbose",
+            "args": [
+                "noise-go"
+            ],
+        }
+    ]
+}
