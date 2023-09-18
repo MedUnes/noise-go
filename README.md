@@ -1,18 +1,55 @@
 # Noise Go
+[![tests](https://github.com/MedUnes/noise-go/actions/workflows/test.yml/badge.svg)](https://github.com/MedUnes/noise-go/actions/workflows/test.yml)
+
 * This repo is meant to provide a startup development boilerplate for Go projects
 * It also comes with a container-first mindset 
 * Last but not least, it contains github actions for some of the common tasks, kind of minimal CI/CD
 
-## Build
+## Docker shortcut commands
+### Build
 ```bash
 $ make build
 ```
 
-## Login
+### Login
 ```bash
 $ make login
 ```
 
+### Down
+```bash
+$ make down
+```
+
+### Status
+```bash
+$ make status
+```
+
+### Stop
+```bash
+$ make stop
+```
+
+### Restart
+```bash
+$ make restart
+```
+
+### Logs
+```bash
+$ make logs
+```
+
+### Build Go app from host
+```bash
+$ make gbuild
+```
+
+### Run Go app from host
+```bash
+$ make run
+```
 ## Working with Visual Studio Code
 
 ## Prequisites
